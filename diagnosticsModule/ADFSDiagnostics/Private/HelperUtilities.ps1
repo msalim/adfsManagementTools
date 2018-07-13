@@ -660,7 +660,6 @@ function GenerateDiagnosticData()
             catch
             {
                 Write-Error -Message (-join("Error running cmdlet ", $cmd, ": ", $_.Exception.Message))
-                # TODO: consider and handle error cases after end-to-end flow is done (bug 469091)
                 return $null
             }
         }
@@ -684,7 +683,7 @@ function GenerateJSONDiagnosticData()
 
     # configs
     # maximum global JSON depth in the diagnostic file
-    $jsonDepth = 99
+    $jsonDepth = 8
     # end configs
 
     Out-Verbose "Generating diagnostic data"
