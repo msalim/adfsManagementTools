@@ -667,7 +667,7 @@ function GenerateDiagnosticData()
     }
 
     # add the cmdlet version to the output
-    Add-Member -InputObject $diagnosticData -MemberType NoteProperty -Name "version" -Value $outputVersion
+    Add-Member -InputObject $diagnosticData -MemberType NoteProperty -Name "Version" -Value $outputVersion
 
     return $diagnosticData
 }
