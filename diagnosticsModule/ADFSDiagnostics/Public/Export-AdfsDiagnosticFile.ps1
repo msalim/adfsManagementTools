@@ -1,7 +1,7 @@
 <#
 .SYNOPSIS
 Gathers and exports diagnostic data into a file. This cmdlet is used with the Diagnostics Analyzer Tool on
-the AD FS Help website (https://adfshelp.microsoft.com/DiagnosticsAnalyzer).
+the AD FS Help website (https://adfshelp.microsoft.com/DiagnosticsAnalyzer/Analyze).
 
 .DESCRIPTION
 The Export-AdfsDiagnosticFile cmdlet gathers diagnostic data from the current AD FS server and exports the diagnostic file
@@ -79,5 +79,5 @@ Function Export-AdfsDiagnosticFile()
     Out-File -FilePath $filePath -InputObject $JSONDiagnosticData -Encoding ascii
 
     # print message for the user to find the file
-    Write-Host "Please upload the diagnostic file located at $filePath to https://adfshelp.microsoft.com/DiagnosticsAnalyzer."
+    Write-Host "Please upload the diagnostic file located at $filePath to https://adfshelp.microsoft.com/DiagnosticsAnalyzer/Analyze."
 }
